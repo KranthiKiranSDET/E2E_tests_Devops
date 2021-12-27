@@ -37,6 +37,12 @@ public class BrowserFactory {
 			ChromeOptions options = new ChromeOptions();
 //		    options.addArguments("--start-maximized");
 //		    options.addArguments("--disable-infobars");
+		options.addArguments("start-maximized"); // open Browser in maximized mode
+		options.addArguments("disable-infobars"); // disabling infobars
+		options.addArguments("--disable-extensions"); // disabling extensions
+		options.addArguments("--disable-gpu"); // applicable to windows os only
+		options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+		options.addArguments("--no-sandbox"); // Bypass OS security model
 		DesiredCapabilities dc = DesiredCapabilities.chrome();
 		    dc.setCapability(ChromeOptions.CAPABILITY, options);
 		webDriver.set( new RemoteWebDriver(new URL("http://192.168.1.23:4444/wd/hub"),dc));

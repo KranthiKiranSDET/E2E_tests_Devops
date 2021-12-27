@@ -37,8 +37,8 @@ public class BrowserFactory {
 			ChromeOptions options = new ChromeOptions();
 //		    options.addArguments("--start-maximized");
 //		    options.addArguments("--disable-infobars");
-		DesiredCapabilities dc = DesiredCapabilities.chrome();
-		    dc.setCapability(ChromeOptions.CAPABILITY, options);
+		//DesiredCapabilities dc = DesiredCapabilities.chrome();
+		    //dc.setCapability(ChromeOptions.CAPABILITY, options);
 		webDriver.set( new RemoteWebDriver(new URL("http://192.168.1.23:4444/wd/hub"),dc));
 
 			

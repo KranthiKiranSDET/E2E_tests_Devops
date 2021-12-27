@@ -39,7 +39,7 @@ public class BrowserFactory {
 //		    options.addArguments("--disable-infobars");
 		DesiredCapabilities dc = DesiredCapabilities.chrome();
 		    dc.setCapability(ChromeOptions.CAPABILITY, options);
-		webDriver.set( new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),dc));
+		webDriver.set( new RemoteWebDriver(new URL("http://192.168.1.23:4444/wd/hub"),dc));
 
 			
 		}
@@ -49,7 +49,7 @@ public class BrowserFactory {
 			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
 		    capabilities.setCapability("requireWindowFocus", true);
 		    capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-		    webDriver.set(new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),capabilities));
+		    webDriver.set(new RemoteWebDriver(new URL("http://192.168.1.23:4444/wd/hub"),capabilities));
 
 			
 		}
@@ -59,7 +59,7 @@ public class BrowserFactory {
 			 
 			DesiredCapabilities capabilities = DesiredCapabilities.firefox(); 
 			 
-			 webDriver.set(new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),capabilities));
+			 webDriver.set(new RemoteWebDriver(new URL("http://192.168.1.23:4444/wd/hub"),capabilities));
 		}
 	}
 
